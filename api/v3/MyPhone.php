@@ -15,6 +15,7 @@
 +--------------------------------------------------------*/
 
 require_once 'api/v3/Phone.php';
+require_once 'api/v3/Phone/Get.php';
 
 /**
  * Wrapper for Phone.get API call
