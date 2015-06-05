@@ -55,22 +55,24 @@ function mydata_civicrm_verify_entity_belongs_to_user($entity_type, $entity_id, 
  * Set permission to the API calls
  */
 function mydata_civicrm_alterAPIPermissions($entity, $action, &$params, &$permissions) {
-  $permissions['my_contact']['get']       = array('view my contact');
-  $permissions['my_contact']['getsingle'] = array('view my contact');
-  $permissions['my_contact']['create']    = array('edit my contact');
-  $permissions['my_contact']['update']    = array('edit my contact');
-  $permissions['my_address']['get']       = array('view my contact');
-  $permissions['my_address']['getsingle'] = array('view my contact');
-  $permissions['my_address']['create']    = array('edit my contact');
-  $permissions['my_address']['update']    = array('edit my contact');
-  $permissions['my_phone']['get']         = array('view my contact');
-  $permissions['my_phone']['getsingle']   = array('view my contact');
-  $permissions['my_phone']['create']      = array('edit my contact');
-  $permissions['my_phone']['update']      = array('edit my contact');
-  $permissions['my_email']['get']         = array('view my contact');
-  $permissions['my_email']['getsingle']   = array('view my contact');
-  $permissions['my_email']['create']      = array('edit my contact');
-  $permissions['my_email']['update']      = array('edit my contact');
+  $permissions['my_contact']['get']              = array('view my contact');
+  $permissions['my_contact']['getsingle']        = array('view my contact');
+  $permissions['my_contact']['create']           = array('edit my contact');
+  $permissions['my_contact']['update']           = array('edit my contact');
+  $permissions['my_address']['get']              = array('view my contact');
+  $permissions['my_address']['getsingle']        = array('view my contact');
+  $permissions['my_address']['create']           = array('edit my contact');
+  $permissions['my_address']['update']           = array('edit my contact');
+  $permissions['my_phone']['get']                = array('view my contact');
+  $permissions['my_phone']['getsingle']          = array('view my contact');
+  $permissions['my_phone']['create']             = array('edit my contact');
+  $permissions['my_phone']['update']             = array('edit my contact');
+  $permissions['my_email']['get']                = array('view my contact');
+  $permissions['my_email']['getsingle']          = array('view my contact');
+  $permissions['my_email']['create']             = array('edit my contact');
+  $permissions['my_email']['update']             = array('edit my contact');
+  $permissions['my_contribution']['get']         = array('view my contact');
+  $permissions['my_contribution']['getsingle']   = array('view my contact');
 }
 
 /**
