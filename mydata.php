@@ -73,6 +73,10 @@ function mydata_civicrm_alterAPIPermissions($entity, $action, &$params, &$permis
   $permissions['my_email']['update']             = array('edit my contact');
   $permissions['my_contribution']['get']         = array('view my contact');
   $permissions['my_contribution']['getsingle']   = array('view my contact');
+  $permissions['my_contribution']['create']      = array('edit my contact');
+  $permissions['my_membership']['get']           = array('view my contact');
+  $permissions['my_membership']['getsingle']     = array('view my contact');
+  $permissions['my_membership']['create']        = array('edit my contact');
 }
 
 /**

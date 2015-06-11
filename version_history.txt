@@ -1,0 +1,16 @@
+Version history
+===============
+
+Version 0.2
+-----------
+- read/create Contribution
+- read/create Membership
+
+
+Version 0.1
+-----------
+- read/edit/create Contact
+- read/edit/create Email
+- read/edit/create Address
+- read/edit/create Phone
+- read Contribution

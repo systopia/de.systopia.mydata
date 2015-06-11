@@ -14,16 +14,16 @@
 | written permission from the original author(s).        |
 +--------------------------------------------------------*/
 
-require_once 'api/v3/Contribution.php';
+require_once 'api/v3/Membership.php';
 
 /**
- * Wrapper for Contribution.get API call
+ * Wrapper for Membership.get API call
  * requires the user to have 'view my contact' permissions
  * and will ONLY return data of the user him/herself
  *
  * @access public
  */
-function civicrm_api3_my_contribution_get($params) {
+function civicrm_api3_my_membership_get($params) {
   // get user's CiviCRM ID
   $user_id = mydata_civicrm_get_civicrm_user_id();
   if (empty($user_id)) {
@@ -31,17 +31,17 @@ function civicrm_api3_my_contribution_get($params) {
   } else {
     $params['contact_id'] = $user_id;
     $params['check_permissions'] = 0;
-    return civicrm_api3_contribution_get($params);
+    return civicrm_api3_membership_get($params);
   }
 }
 
 /**
- * Adjust Metadata for MyContribution.get action
+ * Adjust Metadata for MyMembership.get action
  */
-function _civicrm_api3_my_contribution_get_spec(&$params) {
+function _civicrm_api3_my_membership_get_spec(&$params) {
   if (version_compare(CRM_Utils_System::version(), '4.6', '>=')) {
     // these only exist in 4.6
-    _civicrm_api3_contribution_get_spec($params);
+    _civicrm_api3_membership_get_spec($params);
   }
 }
 
@@ -49,15 +49,15 @@ function _civicrm_api3_my_contribution_get_spec(&$params) {
 
 
 /**
- * Wrapper for Contribution.getsingle API call
+ * Wrapper for Membership.getsingle API call
  * requires the user to have 'view my contact' permissions
  * and will ONLY return data of the user him/herself
  *
  * @access public
  */
-function civicrm_api3_my_contribution_getsingle($params) {
-  // just pass it on to MyContribution.get...
-  $result = civicrm_api3_my_contribution_get($params);
+function civicrm_api3_my_membership_getsingle($params) {
+  // just pass it on to MyMembership.get...
+  $result = civicrm_api3_my_membership_get($params);
   if ($result['is_error'] !== 0) {
     return $result;
   } elseif ($result['count'] === 1) {
@@ -70,25 +70,25 @@ function civicrm_api3_my_contribution_getsingle($params) {
 }
 
 /**
- * Adjust Metadata for MyContribution.getsingle action
+ * Adjust Metadata for MyMembership.getsingle action
  */
-function _civicrm_api3_my_contribution_getsingle_spec(&$params) {
+function _civicrm_api3_my_membership_getsingle_spec(&$params) {
   if (version_compare(CRM_Utils_System::version(), '4.6', '>=')) {
     // these only exist in 4.6
-    _civicrm_api3_contribution_get_spec($params);
+    _civicrm_api3_membership_get_spec($params);
   }
 }
 
 
 /**
- * Wrapper for Contribution.create API call
+ * Wrapper for Membership.create API call
  * requires the user to have 'edit my contact' permissions
  *
- * Contributions can NOT be edited, but only created
+ * Memberships can NOT be edited, but only created
  *
  * @access public
  */
-function civicrm_api3_my_contribution_create($params) {
+function civicrm_api3_my_membership_create($params) {
   // get user's CiviCRM ID
   $user_id = mydata_civicrm_get_civicrm_user_id();
   if (empty($user_id)) {
@@ -98,16 +98,16 @@ function civicrm_api3_my_contribution_create($params) {
     unset($params['id']);
     $params['contact_id'] = $user_id;
     $params['check_permissions'] = 0;
-    return civicrm_api3_contribution_create($params);
+    return civicrm_api3_membership_create($params);
   }
 }
 
 /**
- * Adjust Metadata for MyContribution.create action
+ * Adjust Metadata for MyMembership.create action
  */
-function _civicrm_api3_my_contribution_create_spec(&$params) {
+function _civicrm_api3_my_membership_create_spec(&$params) {
   if (version_compare(CRM_Utils_System::version(), '4.6', '>=')) {
     // these only exist in 4.6
-    _civicrm_api3_contribution_create_spec($params);
+    _civicrm_api3_membership_create_spec($params);
   }
 }
