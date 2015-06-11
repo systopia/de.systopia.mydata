@@ -84,7 +84,7 @@ function _civicrm_api3_my_email_getsingle_spec(&$params) {
 
 /**
  * Wrapper for Email.create API call
- * requires the user to have 'view my contact' permissions
+ * requires the user to have 'edit my contact' permissions
  * and will ONLY return data of the user him/herself
  *
  * @access public

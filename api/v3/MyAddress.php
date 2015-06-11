@@ -49,7 +49,7 @@ function _civicrm_api3_my_address_get_spec(&$params) {
 
 
 /**
- * Wrapper for Phone.getsingle API call
+ * Wrapper for Address.getsingle API call
  * requires the user to have 'view my contact' permissions
  * and will ONLY return data of the user him/herself
  *
@@ -83,8 +83,8 @@ function _civicrm_api3_my_address_getsingle_spec(&$params) {
 
 
 /**
- * Wrapper for Phone.create API call
- * requires the user to have 'view my contact' permissions
+ * Wrapper for Address.create API call
+ * requires the user to have 'edit my contact' permissions
  * and will ONLY return data of the user him/herself
  *
  * @access public
