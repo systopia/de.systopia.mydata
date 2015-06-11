@@ -84,7 +84,7 @@ function _civicrm_api3_my_contribution_getsingle_spec(&$params) {
  * Wrapper for Contribution.create API call
  * requires the user to have 'edit my contact' permissions
  *
- * Contributions can NOT be edited, but only created
+ * Contributions can NOT be edited, only created
  *
  * @access public
  */

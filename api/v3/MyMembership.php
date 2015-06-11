@@ -84,7 +84,7 @@ function _civicrm_api3_my_membership_getsingle_spec(&$params) {
  * Wrapper for Membership.create API call
  * requires the user to have 'edit my contact' permissions
  *
- * Memberships can NOT be edited, but only created
+ * Memberships can NOT be edited, only created
  *
  * @access public
  */

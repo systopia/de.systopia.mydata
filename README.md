@@ -8,6 +8,8 @@ CiviCRM extension to allow API access to your own data
  * Email => MyEmail
  * Contribution => MyContribution (no updates)
  * Membership => MyMembership (no updates)
+ * CustomValue => MyCustomValue (only get, only a Contact custom fields)
+ * MembershipPayment => MyMembershipPayment (only create)
 
 They only allow viewing and editing *your own* contact and its associated address/email/phone/contribution/membership.
 
