@@ -30,6 +30,7 @@ function civicrm_api3_my_membership_get($params) {
     return civicrm_api3_create_error("The CiviCRM id of the caller could not be determined.");
   } else {
     $params['contact_id'] = $user_id;
+    $params['membership_contact_id'] = $user_id;
     $params['check_permissions'] = 0;
     return civicrm_api3_membership_get($params);
   }
@@ -96,6 +97,7 @@ function civicrm_api3_my_membership_create($params) {
   } else {
     // force 'create' call by removing the ID
     unset($params['id']);
+    unset($params['membership_contact_id']);
     $params['contact_id'] = $user_id;
     $params['check_permissions'] = 0;
     return civicrm_api3_membership_create($params);
