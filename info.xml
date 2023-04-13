@@ -2,13 +2,13 @@
 <extension key="de.systopia.mydata" type="module">
   <file>mydata</file>
   <name>MyData</name>
-  <description></description>
+  <description/>
   <license>AGPLv3</license>
   <maintainer>
     <author>B. Endres</author>
     <email>endres@systopia.de</email>
   </maintainer>
-  <releaseDate></releaseDate>
+  <releaseDate/>
   <version>0.2</version>
   <develStage>alpha</develStage>
   <compatibility>
@@ -16,5 +16,9 @@
   </compatibility>
   <civix>
     <namespace>CRM/Mydata</namespace>
+    <format>23.02.1</format>
   </civix>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
 </extension>
